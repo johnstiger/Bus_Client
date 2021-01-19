@@ -47,7 +47,7 @@ class ClientController extends Controller
 
     public function updateClient(Request $req, $id)
     {
-        $client = new Client();
+        $client = Client::find($id);
         $client->name = $req->name;
         $client->contact_number = $req->contact_number;
         $client->address = $req->address;

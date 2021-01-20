@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
-// use App\Http\Controllers\ResourceUser;
+// use App\Http\Controllers\ResourceClient;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +26,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::put('client/{id}', [ClientController::class,'clientUpdate']);
 // Route::delete('client/{id}', [ClientController::class,'clientDelete']);
 
+
+Route::post('client/login',[App\Http\Controllers\ResourceClient::class,'login']);
+Route::post('client/register',[App\Http\Controllers\ResourceClient::class,'register']);
 Route::apiResource('client',ResourceClient::class);
 Route::apiResource('user',ResourceUser::class);

@@ -55,10 +55,12 @@ class ResourceClient extends Controller
 
     public function login(Request $request)
     {
-    $client = Client::where('username', $request->username)->first();
+        
+    $client = User::where('email', $request->email)->first();
+
     if (!$client || !Hash::check($request->password, $client->password)) {
     return response([
-    'message' => ['This credential doesn\' match to our records!']
+    'message' => ['This credential does not match in our records!']
     ], 404);
     }
 
@@ -82,10 +84,12 @@ class ResourceClient extends Controller
         if($validator->fails()){
             return response()->json($validator->errors(),400);
         }
+
         $client = new User();
         $client->name = $request->name;
         $client->email = $request->email;
         $client->password = Hash::make($request->password);
+        if($client->email)
         $client->save();
         return response()->json($client, 201);
     }

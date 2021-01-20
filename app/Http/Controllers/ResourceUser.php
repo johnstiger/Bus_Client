@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Support\Facades\Validator;
 
 
 class ResourceUser extends Controller
 {
+    public function loginAdmin(Request $request)
+    {
+        
+    }
     /**
      * Display a listing of the resource.
      *

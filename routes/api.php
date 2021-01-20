@@ -27,7 +27,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::delete('client/{id}', [ClientController::class,'clientDelete']);
 
 
-Route::post('client/login',[App\Http\Controllers\ResourceClient::class,'login']);
-Route::post('client/register',[App\Http\Controllers\ResourceClient::class,'register']);
+Route::post('user/login',[App\Http\Controllers\ResourceClient::class,'login']);
+Route::post('user/register',[App\Http\Controllers\ResourceClient::class,'register']);
 Route::apiResource('client',ResourceClient::class);
 Route::apiResource('user',ResourceUser::class);

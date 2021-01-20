@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
+// use App\Http\Controllers\ResourceUser;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,3 +27,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::delete('client/{id}', [ClientController::class,'clientDelete']);
 
 Route::apiResource('client',ResourceClient::class);
+Route::apiResource('user',ResourceUser::class);

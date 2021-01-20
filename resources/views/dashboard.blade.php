@@ -39,6 +39,9 @@
 <div class="add">
 <a href="/dashboard/addClient"><button class="btn btn-primary" style="margin: 20px;">Add New Client</button></a>
 </div>
+<div class="add">
+<a href="/dashboard/AccessTokenForm"><button class="btn btn-primary" style="margin: 20px;">Access Token</button></a>
+</div>
                 </div>
             </div>
         </div>

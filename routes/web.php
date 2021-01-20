@@ -22,6 +22,9 @@ Route::get('/dashboard/editClient/{id}','ClientController@edit');
 Route::put('/dashboard/updateClient/{id}','ClientController@updateClient');
 Route::delete('/dashboard/destroy/{id}','ClientController@destroy');
 
+Route::get('/dashboard/AccessTokenForm','ClientController@getToken');
+Route::get('/dashboard/getToken','ClientController@login');
+
 Route::get('/dashboard','ClientController@index')->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

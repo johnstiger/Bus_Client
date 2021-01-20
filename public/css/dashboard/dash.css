@@ -5,3 +5,6 @@ table,tr,td,th{
     padding: 10px;
 }
 table{width: 100%;}
+.add{
+    float: left;
+}

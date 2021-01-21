@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,10 @@ Route::delete('/dashboard/destroy/{id}','ClientController@destroy');
 
 Route::get('/dashboard/AccessTokenForm','ClientController@getToken');
 Route::get('/dashboard/getToken','ClientController@login');
+
+Route::get('/dashboard/booking/send-email',[MailController::class,'sendEmail']);
+Route::get('/dashboard/booking','ClientController@booking');
+
 
 Route::get('/dashboard','ClientController@index')->middleware(['auth'])->name('dashboard');
 

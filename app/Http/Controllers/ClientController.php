@@ -5,13 +5,17 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
     public function getToken(){
         return view('access');
     }
-    
+   
+    public function booking(){
+        return view('booking');
+    }
     public function login(Request $request)
         {
 
@@ -35,6 +39,7 @@ class ClientController extends Controller
     
     public function index()
     {
+        $notif = DB::table('booking')->count();
         $client = User::all();
         return view('dashboard', compact("client"));
     }

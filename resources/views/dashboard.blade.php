@@ -39,7 +39,7 @@
 <a href="/dashboard/AccessTokenForm"><button class="btn btn-primary" style="margin: 20px;">Access Token</button></a>
 </div>
 <div class="add">
-<a href="/dashboard/Booking"><button class="btn btn-primary" style="margin: 20px;">Booking</button></a>
+<a href="/dashboard/booking"><button class="btn btn-primary" style="margin: 20px;">Booking</button></a>
 </div>
                 </div>
             </div>

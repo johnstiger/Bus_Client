@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-3">
             <div class="card">
-                <div class="card-header"><h3>Add Client</h3></div>
+                <div class="card-header"><h3>Add User</h3></div>
                 <div class="card-body">
                    <form action="/dashboard/addClient/confirmed" method="post">
                    @csrf
@@ -19,19 +19,8 @@
                     {{ $message }}
                    @enderror
                    <br>
-                   <input type="text" name = "contact_number" placeholder="Contact Number">
                    <br>
-                   @error('contact_number')
-                   {{ $message }}
-                   @enderror
-                   <br>
-                   <input type="text" name = "address" placeholder="Address">
-                   <br>
-                   @error('address')
-                   {{ $message }}
-                   @enderror
-                   <br>
-                   <input type="text" name="username" placeholder="Username">
+                   <input type="text" name="email" placeholder="Email">
                    <br>
                    @error('username')
                    {{ $message }}
@@ -43,7 +32,7 @@
                    {{ $message }}
                    @enderror
                    <br>
-                   <button class="btn btn-primary">Add Client</button>
+                   <button class="btn btn-primary">Add User</button>
                    <a href="/dashboard" class="btn btn-secondary">Cancel</a> 
                    </form>
                 </div>

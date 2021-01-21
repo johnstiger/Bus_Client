@@ -12,19 +12,15 @@
                 <table>
     <tr>
         <th>Id</th>
-        <th>Client Name</th>
-        <th>Contact Number</th>
-        <th>Address</th>
-        <th>Username</th>
+        <th>User Name</th>
+        <th>Email</th>
         <th width = "280px">Action</th>
     </tr>
     @foreach($client as $user)
     <tr>
         <td>{{$user->id}}</td>
         <td>{{$user->name}}</td>
-        <td>{{$user->contact_number}}</td>
-        <td>{{$user->address}}</td>
-        <td>{{$user->username}}</td>
+        <td>{{$user->email}}</td>
         <td>
              <form action="/dashboard/destroy/{{$user->id}}" method="post">
             <a href="/dashboard/editClient/{{$user->id}}"><button type="button" class="btn btn-primary">Edit Client</button></a>

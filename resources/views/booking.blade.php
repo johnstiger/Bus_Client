@@ -24,6 +24,9 @@
                 <div class="card-body">
 
                 <form action="/dashboard/booking/send-email" method="GET">
+                <input type="text" name = "name" placeholder="Input Name">
+                <br>
+                <br>
                 <input type="text" name = "address" placeholder="Input Address">
                 <br>
                    <br>
